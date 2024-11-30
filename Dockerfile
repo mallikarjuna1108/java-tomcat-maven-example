@@ -12,3 +12,7 @@ RUN sed -i 's/8080/8000/g' /usr/local/tomcat/conf/server.xml
 
 # Expose the Tomcat HTTP port on 8000
 EXPOSE 8000
+
+# Optional: Specify the default command to run Tomcat
+CMD ["catalina.sh", "run"]
+
