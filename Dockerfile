@@ -5,7 +5,7 @@ FROM tomcat:9-jdk11-openjdk
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy your WAR file to Tomcat's webapps directory
-COPY target/java-tomcat-maven-example.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/MyMavenApp.war /usr/local/tomcat/webapps/ROOT.war
 
 # Change the port Tomcat listens on (from default 8080 to 8000)
 RUN sed -i 's/8080/8000/g' /usr/local/tomcat/conf/server.xml
@@ -13,6 +13,4 @@ RUN sed -i 's/8080/8000/g' /usr/local/tomcat/conf/server.xml
 # Expose the Tomcat HTTP port on 8000
 EXPOSE 8000
 
-# Optional: Specify the default command to run Tomcat
-CMD ["catalina.sh", "run"]
 
