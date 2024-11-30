@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: javaapp
-          image: premgowda07/javaapp_241047037  # Docker image name (replace if necessary)
+          image: malli136/javaapp  # Docker image name (replace if necessary)
           ports:
             - containerPort: 8000  # Expose port 8000 inside the container (matches your Dockerfile)
 ---
